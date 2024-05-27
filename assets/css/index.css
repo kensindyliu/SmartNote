@@ -188,5 +188,12 @@ button {
       margin: 0;
       padding: 0;
     }
+    .window-buttons {
+        display: none; /* Hide all buttons with class 'window-btn' */
+      }
+
+      #noteTitle {
+        justify-content: center;
+      }
   }
   
