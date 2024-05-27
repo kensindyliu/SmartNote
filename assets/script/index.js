@@ -11,6 +11,8 @@ let offsetX, offsetY;
 let currentNoteIndex = null; // Track the index of the currently displayed note
 let isMaximized = false; // Track whether the window is maximized
 let previousSize = {}; // Store previous window size and position
+let isMinimized = false;
+let intOriginalHeight = 0;
 
 // Window control functions
 function closeWindow() {
@@ -18,7 +20,17 @@ function closeWindow() {
 }
 
 function minimizeWindow() {
-    noteWindow.style.height = '40px';
+    if(isMinimized)
+    {
+        noteWindow.style.height = intOriginalHeight;
+        isMinimized = false;
+    }
+    else
+    {
+        intOriginalHeight = noteWindow.style.height ;
+        noteWindow.style.height = '40px';
+        isMinimized = true;
+    }
 }
 
 function maximizeWindow() {
