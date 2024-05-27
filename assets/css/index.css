@@ -105,6 +105,10 @@ body, html {
     position: relative; /* Positioning context for delete button */
 }
 
+#noteList li:hover{
+    background-color: #4DA8DA;
+}
+
 #noteList li:hover .delete-button {
     display: block; /* Show delete button on hover */
 }
