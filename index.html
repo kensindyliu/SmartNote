@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Liu zhixin(Ken)">
+    <meta name="description" content="Liu zhixin(Ken); web developer">
+    <meta name="keywords" content="web developer, front-end, html, css, javascript, react, sql">
+    <title>Smart Note</title>
+    <script src="https://kit.fontawesome.com/3f60ee6457.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/script/index.js" defer></script>
+</head>
+<body>
+    <div class="desktop">
+        <div class="window" id="noteWindow">
+            <div class="window-header" onmousedown="startDragging(event)">
+                <div class="window-buttons">
+                    <button class="window-btn close" onclick="closeWindow()">✕</button>
+                    <button class="window-btn minimize" onclick="minimizeWindow()">━</button>
+                    <button class="window-btn maximize" onclick="maximizeWindow()">▢</button>
+                </div>
+                <div class="window-title" id="noteTitle">Smart Note</div>
+            </div>
+            <div class="window-body">
+                <div class="window-sidebar">
+                    <ul id="noteList">
+                        <!-- Note titles will appear here -->
+                    </ul>
+                </div>
+                <div class="window-content">
+                    <div id="divTitle">
+                        <input type="text" id="noteTitleInput" placeholder="Title">
+                        <button id="btnAdd" onclick="addNote()">New</button>
+                    </div>
+                    <div id="divContent">
+                        <textarea id="noteContent" placeholder="Content"></textarea>
+                    </div>
+                    <div id="divButtons">
+                        <button onclick="cancelNote()">Cancel</button>
+                        <button onclick="saveNote()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
